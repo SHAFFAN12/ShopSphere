@@ -5,7 +5,7 @@ import { FaCartPlus } from "react-icons/fa6";
 import CountryDropdown from '../CountryDropdown';
 import { Button } from '@mui/material';
 import SearchBox from './SearchBox';
-import { IoMenu } from "react-icons/io5";
+import Navigation from './Navigation';
 
 const Header = () => {
     return(
@@ -44,7 +44,7 @@ const Header = () => {
                 </div>
 
             </header>
-
+            <Navigation/>
             
         </div>
         </>

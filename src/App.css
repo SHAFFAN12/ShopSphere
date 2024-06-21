@@ -14,6 +14,18 @@ body{
   background: #233a95;
 }
 
+::-webkit-scrollbar{
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ccc !important;
+}
+::-webkit-scrollbar-track{
+  background: transparent !important;
+}
+
 @media(max-width: 1300px){
   .container, .container-lg, .container-md, .container-sm, .container-xl{
     max-width: 1200px;
@@ -70,7 +82,7 @@ body{
   opacity: 0.7;
 }
 
-header .headerSearch{
+.headerSearch{
   width: 60%;
   height: 50px;
   background: #f3f4f7;
@@ -80,7 +92,7 @@ header .headerSearch{
   border: 1px solid rgba(0,0,0,0.1);
 }
 
-header .headerSearch input{
+.headerSearch input{
   background: transparent !important;
   outline: none;
   font-size: 15px;
@@ -91,15 +103,15 @@ header .headerSearch input{
   padding: 0px 20px !important;
 }
 
-header .headerSearch input::-webkit-input-placeholder{
+.headerSearch input::-webkit-input-placeholder{
   color: rgba(0,0,0,0.6);
 }
 
 
-header .headerSearch Button{
+.headerSearch Button{
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 10px;
   z-index: 100;
   min-width: 40px !important;
   height: 40px !important;
@@ -108,8 +120,9 @@ header .headerSearch Button{
   color: #000;
 }
 
-header .headerSearch Button svg{
+.headerSearch Button svg{
   font-size: 25px;
+  opacity: 0.8;
 }
 
 header .part3 .circle{
@@ -150,9 +163,57 @@ header .part3 .circle svg{
   height: 20px;
 }
 
+.locationModel .MuiPaper-elevation{
+  padding: 25px;
+  position: relative;
+}
+
+.locationModel .countryList{
+  margin-bottom: 0px;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.locationModel .countryList li{
+  width: 100%;
+  list-style: none;
+}
+
+.locationModel .countryList li button{
+  width: 100%;
+  text-transform: capitalize !important;
+  color: #000 !important;
+  justify-content: flex-start !important;
+  padding: 10px 20px !important;
+}
+
+.locationModel .closeButton{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000 !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+.locationModel .closeButton svg{
+  font-size: 22px;
+}
+
+nav .navPart1{
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+
+nav .navPart2{
+  max-width: 80%;
+  flex: 0 0 80%;
+}
+
 nav .CategoryTab{
   background: #2bbef9;
-  padding: 8px 30px !important;
+  padding: 10px 15px !important;
   border-radius: 30px !important;
 }
 
@@ -166,4 +227,40 @@ nav .CategoryTab:hover{
 
 nav .CategoryTab .text{
   font-weight: 600;
+}
+
+nav .CategoryTab .icon1 svg{
+  font-size: 20px !important;
+}
+
+nav .CategoryTab .icon2 svg{
+  font-size: 15px !important;
+}
+
+nav .navPart2 ul{
+  margin-bottom: 0px;
+}
+
+nav .navPart2 ul li a svg{
+  font-size: 20px;
+}
+nav .navPart2 ul li a{
+  text-decoration: none;
+}
+nav .navPart2 ul li a button{
+  font-size: 14px !important;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;/*agar mein ek list kam karunga toh yeh 10px 20px hojayega*/
+  transition: all 0.2s ease-in-out;
+  border-radius: 25px;
+}
+
+nav .navPart2 ul li a:hover{
+  background: #f0faff;
+  color: #2bbef9;
 }
