@@ -34,40 +34,40 @@ const CustomPrevArrow = (props) => {
   );
 };
 
-// const Homebanner = () => {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//     nextArrow: <CustomNextArrow />,
-//     prevArrow: <CustomPrevArrow />
-//   };
+const Homebanner = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />
+  };
 
-//   return (
-//     <div className="container mt-3">
-//       <div className="homeBannerSection">
-//       <Slider {...settings}>
-//         <div className='item'>
-//           <img src={slide1} className='w-100' alt='slide1'/>
-//         </div>
-//         <div className='item'>
-//           <img src={slide2} className='w-100' alt='slide2'/>
-//         </div>
-//         <div className='item'>
-//           <img src={slide3} className='w-100' alt='slide3'/>
-//         </div>
-//         <div className='item'>
-//           <img src={slide1} className='w-100' alt='slide4'/>
-//         </div>
-//       </Slider>
-//     </div>
-//     </div>
-//   );
-// };
+  return (
+    <div className="container mt-3">
+      <div className="homeBannerSection">
+      <Slider {...settings}>
+        <div className='item'>
+          <img src={slide1} className='w-100' alt='slide1'/>
+        </div>
+        <div className='item'>
+          <img src={slide2} className='w-100' alt='slide2'/>
+        </div>
+        <div className='item'>
+          <img src={slide3} className='w-100' alt='slide3'/>
+        </div>
+        <div className='item'>
+          <img src={slide1} className='w-100' alt='slide4'/>
+        </div>
+      </Slider>
+    </div>
+    </div>
+  );
+};
 
-// export default Homebanner;
+export default Homebanner;

@@ -1,19 +1,19 @@
-import HomeBanner from "../../Components/Homebanner";
-import banner1 from '../../Assets/banner-box.jpg';
-import banner2 from '../../Assets/banner2.jpg';
-import { Button } from "@mui/material";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import ProductItem from "../../Components/ProductItem";
-import HomeCategory from "../../Components/HomeCategory";
+import 'swiper/css/navigation';
+import 'swiper/css';
+import { Button } from "@mui/material";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { IoMailOpenOutline } from "react-icons/io5";
+import banner1 from '../../Assets/banner-box.jpg';
+import banner2 from '../../Assets/banner2.jpg';
 import banner3 from '../../Assets/banner3.jpg';
 import banner4 from '../../Assets/banner4.jpg';
 import newsLetterImg from '../../Assets/coupon.png';
-import { IoMailOpenOutline } from "react-icons/io5";
+import Homebanner from "../../Components/Homebanner";
+import ProductItem from "../../Components/ProductItem";
+import HomeCategory from "../../Components/HomeCategory";
 
 
 
@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <>
-            <HomeBanner />
+            <Homebanner />
 
             <HomeCategory />
 
