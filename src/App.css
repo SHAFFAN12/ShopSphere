@@ -295,7 +295,7 @@ nav .navPart1 .catWrapper .sidebarNav{
   padding: 15px 0px;
   transition: all .2s ;
   visibility: hidden;
-  z-index: 100;
+  z-index: 200;
 }
 
 nav .navPart1 .catWrapper .sidebarNav.open{
@@ -324,6 +324,7 @@ nav .navPart1 .catWrapper .sidebarNav ul li button svg{
 }
 nav .navPart1 .catWrapper .sidebarNav ul li button:hover{
   background: transparent !important;
+  color:red;
 }
 
 nav .navPart1 .catWrapper .sidebarNav ul li{
@@ -336,7 +337,7 @@ nav .navPart1 .catWrapper .sidebarNav ul li .subMenu{
   width: 250px;
   height: 100%;
   background: #fff;
-  z-index: 100;
+  z-index: 200;
   opacity: 0;
   visibility: hidden;
   transition: all .2s ease-in-out;
@@ -583,9 +584,9 @@ nav .navPart2 ul li:hover .subMenu{
   z-index: 100;
 }
 
-/* .productItem:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-} */
+.productItem:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 20px rgba(0, 0, 0, 0.23);
+}
 
 .productItem .info {
   padding: 15px;
@@ -596,25 +597,25 @@ nav .navPart2 ul li:hover .subMenu{
   font-weight: 600;
 }
 
-.info .oldPrice {
+.info .oldPrice{
   font-size: 16px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.2);
-  text-decoration: line-through;
+  text-decoration: line-through ;
 }
 
-.info .oldPrice.lg {
+.info .oldPrice.lg{
   font-size: 20px;
+}
+.info .netPrice {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .info .netPrice.lg {
   font-size: 20px;
 }
 
-.info .netPrice {
-  font-size: 16px;
-  font-weight: bold;
-}
 
 .productItem .actions {
   position: absolute;
@@ -688,7 +689,7 @@ nav .navPart2 ul li:hover .subMenu{
 
 }
 .product_row .swiper .productItem:hover{
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 20px rgba(0, 0, 0, 0.23);
 }
 
 .product_row .swiper-button-prev,
@@ -968,53 +969,70 @@ footer .copyright ul li a:hover svg{
 }
 
 
-
-.productZoom{
+.productZoom {
   width: 100%;
   height: auto;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0px;
   overflow: hidden;
   border-radius: 15px;
 }
-.productZoom .badge{
+
+.productZoom .badge {
   position: absolute;
   top: 20px;
   left: 20px;
   z-index: 100;
 }
 
-.zoomSliderBig{
+.zoomSliderBig {
   width: 100% !important;
+  border: none !important; /* Remove border from big slider */
 }
-.zoomSlider{
+
+.zoomSlider {
   padding-top: 30px;
+  height: 80px; /* Adjust height for smaller slider */
 }
-.zoomSlider .slick-slide{
-  padding-right: 20px !important;
-}
-.zoomSlider *{
+
+.zoomSlider * {
   outline: none !important;
 }
-.zoomSlider .item{
+
+.zoomSlider .item {
   border: 2px solid transparent !important;
   overflow: hidden;
   border-radius: 15px;
   cursor: pointer;
+  height: 70px; /* Adjust height for smaller slider items */
 }
-.zoomSlider .slick-current .item{
-  border: 2px solid #3bb77e !important;
+
+.zoomSlider .item img {
+  height: 100%; /* Ensure images fit within the item */
+  object-fit: cover; /* Ensure images cover the item without distortion */
 }
-.zoomSlider .slick-arrow{
-  top: 55% !important;
-  zoom: 80% !important;
+
+.zoomSlider .item_active {
+  border: 2px solid rgba(0, 0, 0, 0.2) !important;
 }
-.zoomSlider .slick-arrow.slick-next{
-  right: -2% !important;
+
+.zoomSlider .swiper-button-prev,
+.zoomSlider .swiper-button-next {
+  width: 30px !important; /* Smaller arrow size */
+  height: 30px !important; /* Smaller arrow size */
+  top: 50%;
+  background-color: white !important; /* White background */
+  color: black !important; 
+  border-radius: 50%; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add slight shadow for visibility */
+  font-size: 15px !important; /* Smaller arrow icons */
+  border: 1px solid rgba(0, 0, 0, 0.1); 
 }
-.zoomSlider .slick-arrow.slick-prev{
-  left: -5% !important;
+.zoomSlider .swiper-button-prev::after,
+.zoomSlider .swiper-button-next::after{
+  font-size: 15px !important; /* Smaller arrow icons */
+  color:#000;
 }
+
 
 .quantityDrop{
   width: 150px;
@@ -1051,3 +1069,62 @@ footer .copyright ul li a:hover svg{
   font-size: 15px;
 }
 
+.product_Listing_Page{
+  padding: 35px 0px;
+}
+.product_Listing_Page .productListing{
+  gap: 20px;
+}
+.product_Listing_Page .productListing .sidebar{
+  width: 20%;
+  flex: 0 0 20%;
+}
+
+.product_Listing_Page .productListing .sidebar .filterBox{
+  margin-bottom: 35px;
+}
+
+.product_Listing_Page .productListing .sidebar .filterBox h6{
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.product_Listing_Page .productListing .sidebar .scroll{
+  padding-left: 10px;
+  max-height: 180px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.product_Listing_Page .productListing .sidebar .scroll::-webkit-scrollbar{
+  width: 5px !important;
+  height: 5px !important;
+}
+
+.product_Listing_Page .productListing .sidebar .scroll ul li{
+  list-style: none;
+  margin-bottom: 0px;
+  width: 100%;
+}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
+  padding: 2px !important;
+}
+.css-ahj2mt-MuiTypography-root{
+  font-size: 13px !important;
+}
+.css-i4bv87-MuiSvgIcon-root{
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-intermediate{
+  color: red !important;
+}
+
+.product_Listing_Page .productListing .content_right{
+  width: 80%;
+  flex: 0 0 80%;
+
+}
