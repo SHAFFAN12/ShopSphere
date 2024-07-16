@@ -4,7 +4,9 @@ import { SlSizeFullscreen } from "react-icons/sl";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { useContext } from 'react';
 import {MyContext} from "../../App";
-const ProductItem = () => {
+
+
+const ProductItem = (props) => {
 
     const context = useContext(MyContext);
 
@@ -16,7 +18,7 @@ const ProductItem = () => {
 
     return (
         <>
-            <div className="item productItem">
+            <div className={`productItem ${props.itemView}`}>
                 <div className="imgWrapper">
                     <img src={img1} className="w-100" alt="Product" />
                     <span className='badge badge-primary'>28%</span>
