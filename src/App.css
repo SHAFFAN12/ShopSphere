@@ -12,7 +12,7 @@ body{
   font-size: 14px;
   color: rgba(0,0,0,0.8);
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .bg-blue{
@@ -71,6 +71,11 @@ body{
 }
 .btn-sml svg{
   font-size: 20px;
+}
+
+.btn-circle{
+  border-radius: 50% !important;
+  min-width: auto !important;
 }
 button{
   text-transform: capitalize !important;
@@ -607,7 +612,7 @@ nav .navPart2 ul li:hover .subMenu{
 }
 
 .info .oldPrice{
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.2);
   text-decoration: line-through ;
@@ -617,7 +622,7 @@ nav .navPart2 ul li:hover .subMenu{
   font-size: 20px;
 }
 .info .netPrice {
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold;
 }
 
@@ -694,15 +699,32 @@ nav .navPart2 ul li:hover .subMenu{
 .product_row .productItem {
   border-right: 1px solid transparent !important;
 }
-
-
-.product_row .swiper-slide:last-child .productItem{
-  border: 1px solid rgba(0,0,0,0.1) !important;
-
+.product_row .swiper-slide:last-child .productItem {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
-.product_row .swiper .productItem:hover{
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 20px rgba(0, 0, 0, 0.23);
+.product_row .swiper{
+  padding-right: 80px !important;
 }
+
+.product_row .swiper-wrapper{
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px;
+}
+.product_row .swiper-slide {
+  padding: 15px 0px;
+}
+
+
+/* .product_row .swiper-slide:not(:last-child) .productItem {
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+} */
+
+/* Improved box-shadow for better appearance */
+.product_row .swiper .productItem:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 .product_row .swiper-button-prev,
 .product_row .swiper-button-next {
@@ -719,8 +741,9 @@ nav .navPart2 ul li:hover .subMenu{
   font-weight: bold; 
   cursor: pointer;
 }
+
 .product_row .swiper-button-prev:hover,
-.product_row .swiper-button-next:hover{
+.product_row .swiper-button-next:hover {
   background-color: #000 !important; 
   color: #fff !important;
 }
@@ -732,6 +755,9 @@ nav .navPart2 ul li:hover .subMenu{
 .product_row .swiper-button-next {
   right: 1px !important; 
 }
+.swiper {
+  padding-right: 2px !important;
+}
 
 .product_row .swiper-button-prev::after, 
 .product_row .swiper-button-next::after {
@@ -741,9 +767,6 @@ nav .navPart2 ul li:hover .subMenu{
 
 
 
-.swiper {
-  padding-right: 1px !important;
-}
 
 .homeCategory {
   padding: 35px 0px;
@@ -1244,8 +1267,218 @@ footer .copyright ul li a:hover svg{
   padding: 45px 0px;
 }
 
-.productDetails .hd{font-size: 26px;}
-
+.productDetails h2.hd{font-size: 26px;}
+.productDetails h3.hd{font-size: 18px !important;}
 
 .productDetails .oldPrice{font-size: 20px;}
 .productDetails .netPrice{font-size: 22px;}
+
+.productSize{
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+}
+.productSize ul li{
+  margin-right: 10px !important;
+}
+
+.productSize ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #000;
+  font-size: 14px !important;
+  transition: all .1s ease-in-out;
+}
+
+.productSize ul li a:hover{
+  background: #ececec !important;
+}
+
+.productSize ul li a.active{
+  background: #3bb !important;
+  color: #fff !important;
+}
+.productDetails .btn-circle{
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #edeef5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000;
+  padding: 5px !important;
+}
+.productDetails .btn-circle svg{
+  color: #000 !important;
+  opacity: 0.8;
+  font-size: 18px;
+}
+
+.productDetails .btn-circle:hover{
+  background: #ccc !important;
+}
+
+
+
+.reviewsCard {
+  margin-bottom: 25px !important;
+  display: flex; /* Ensure flexbox layout */
+}
+
+.reviewsCard .image {
+  width: 100px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+  margin-right: 15px; /* Add spacing between image and content */
+}
+
+.reviewsCard .rounded-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Make the image circular */
+  overflow: hidden;
+}
+
+.reviewsCard .rounded-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviewsCard .info {
+  width: calc(100% - 115px); /* Adjust width to accommodate image */
+}
+
+.reviewsCard .info h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reviewsCard .info .text-light {
+  color: #6c757d; /* Adjust text color */
+  font-size: 14px;
+}
+
+.reviewsCard .info p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.reviewsCard .info .MuiRating-root {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.detailPageTabs {
+  background: #fafafa;
+  border-radius: 25px !important;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.customTabs ul li {
+  margin-right: 15px !important;
+}
+
+.customTabs ul li button {
+  padding: 8px 25px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  border-radius: 30px !important;
+  color: #000 !important;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.customTabs ul li button.active {
+  background: #233a95 !important;
+  color: #fff !important;
+  border-color: #233a95 !important;
+}
+
+.detailPageTabs .table {
+  margin-top: 15px;
+}
+
+.detailPageTabs .table th,
+.detailPageTabs .table td {
+  vertical-align: middle;
+  font-size: 14px;
+  border: none;
+}
+
+.detailPageTabs .table td p {
+  margin-bottom: 0;
+}
+
+.detailPageTabs .table th {
+  background-color: #f2f2f2; /* Light background for table headers */
+  color: #333;
+}
+
+.detailPageTabs .table-bordered {
+  border: 1px solid #ddd; /* Border for table */
+}
+
+.detailPageTabs .table-bordered th,
+.detailPageTabs .table-bordered td {
+  border: 1px solid #ddd; /* Border for table cells */
+}
+
+.reviewForm h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #333; /* Darker color for heading */
+}
+
+.reviewForm .form-group {
+  margin-bottom: 25px;
+}
+
+.reviewForm .form-group .form-control {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 7px !important;
+  padding-left: 20px;
+}
+
+.reviewForm .form-group textarea.form-control {
+  height: 200px;
+  padding-top: 15px;
+  padding-left: 20px;
+  font-size: 14px;
+  border-radius: 10px; /* Rounded corners for textarea */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.reviewForm .form-group textarea.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(35, 58, 149, 0.2); /* Focus shadow color */
+}
+
+.reviewForm .form-group input.form-control {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 7px !important;
+  padding-left: 20px;
+}
+
+.reviewForm .form-group .MuiRating-root {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.reviewForm .form-group .MuiRating-iconFilled {
+  color: #fcb326; /* Star color */
+}
+
+.reviewForm .form-group .MuiRating-iconEmpty {
+  color: #ccc; /* Empty star color */
+}
