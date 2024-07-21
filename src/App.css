@@ -16,10 +16,15 @@ body{
 }
 
 .bg-blue{
-  background: #233a95;
+  background: #233a95 !important;
 }
-
-
+.text-blue{
+  color: #233a95 !important;
+}
+.text-red{
+  color: #ed174a !important;
+  
+}
 .cursor{
   cursor: pointer; 
 }
@@ -58,8 +63,12 @@ body{
 }
 .btn-big{
   font-size: 15px !important;
+  font-weight: bold !important; 
   padding: 7px 30px !important;
   min-width: auto !important;
+}
+.btn-blue svg{
+  font-size: 22px;
 }
 .btn-round{
   border-radius: 30px !important;
@@ -1481,4 +1490,88 @@ footer .copyright ul li a:hover svg{
 
 .reviewForm .form-group .MuiRating-iconEmpty {
   color: #ccc; /* Empty star color */
+}
+
+
+.cartPage .table thead{
+  background: #e3e3e3 !important;
+  overflow: hidden;
+}
+.cartPage .table thead th{
+  border: 0px !important;
+}
+
+.cartPage .table thead th:first-child{
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+.cartPage .table thead th:last-child{
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.cartItemImgWrapper .img_Wrapper{
+  width: 100px;
+  overflow: hidden;
+}
+.cartItemImgWrapper{
+  width: 280px;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.cartItemImgWrapper .info a:hover{
+  text-decoration: none;
+}
+.cartItemImgWrapper .info h6{
+  color: #343434;
+  font-weight: bold;
+}
+
+.cartItemImgWrapper .info h6:hover{
+  color: #fcb326 !important;
+}
+
+.remove{
+  cursor: pointer;
+}
+
+.remove svg{
+  font-size: 30px;
+}
+
+.remove:hover svg{
+  color: #fcb326 !important;
+}
+.cartPage .quantityDrop button{
+  zoom: 75%;
+}
+
+.cartPage table th, .cartPage table td{
+  vertical-align: middle;
+}
+
+.cartPage table th, .cartPage table td{
+  border-top: 0px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.cartPage table tbody tr:hover{
+  background: #fafafa;
+}
+
+.cartDetails{
+  border-radius: 7px !important;
+}
+
+.cartDetails h4{
+  font-size: 16px;
+  font-weight: 800 !important;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cartDetails span{
+
 }

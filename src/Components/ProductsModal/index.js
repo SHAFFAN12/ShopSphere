@@ -7,6 +7,7 @@ import { MdClose, MdOutlineCompareArrows } from "react-icons/md";
 import { MyContext } from "../../App";
 import QuantityDrop from '../QuantityDrop';
 import ProductZoom from '../ProductZoom';
+import { TiShoppingCart } from "react-icons/ti";
 
 
 const ProductsModal = (props) => {
@@ -40,7 +41,7 @@ const ProductsModal = (props) => {
                         <p className="mt-2">Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent</p>
                         <div className="d-flex align-items-center">
                             <QuantityDrop />
-                            <Button className="btn-blue btn-lg btn-big btn-round ml-3">Add to Cart</Button>
+                            <Button className="btn-blue btn-lg btn-big btn-round ml-3"><TiShoppingCart/>Add to Cart</Button>
                         </div>
                         <div className="d-flex align-items-center mt-5 actions">
                             <Button className="btn-round btn-sml" variant='outlined'><IoMdHeart /> &nbsp; Add To Wishlist</Button>
