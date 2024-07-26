@@ -3,13 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createContext, useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header';
-import Home from './Pages/Home';
 import Footer from './Components/Footer';
+import Header from './Components/Header';
 import ProductsModal from './Components/ProductsModal';
+import Cart from './Pages/Cart';
+import Home from './Pages/Home';
 import Listing from './Pages/Listing';
 import ProductDetails from './Pages/ProductDetails';
-import Cart from './Pages/Cart';
+import SignIn from './Pages/SignIn';
 
 const MyContext = createContext();
 
@@ -18,6 +19,7 @@ function App() {
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry, setselectedCountry] = useState('');
   const [isOpenProductModal, setIsOpenProductModal] = useState(false);
+  const [isHeaderFooterShow,setisHeaderFooterShow] = useState(true);
 
 
   useEffect(() => {
@@ -36,20 +38,28 @@ function App() {
     setselectedCountry,
     selectedCountry,
     isOpenProductModal,
-    setIsOpenProductModal
+    setIsOpenProductModal,
+    isHeaderFooterShow,
+    setisHeaderFooterShow
   }
 
   return (
     <BrowserRouter>
       <MyContext.Provider value={values}>
-        <Header />
+        {
+          isHeaderFooterShow === true && <Header />
+        }  
         <Routes>
           <Route path='/' exact={true} element={<Home />} />
           <Route path='/cat/:id' exact={true} element={<Listing />} />
           <Route path='/product/:id' exact={true} element={<ProductDetails />} />
           <Route path='/cart' exact={true} element={<Cart/>} />
+          <Route path='/signIn' exact={true} element={<SignIn/>} />
         </Routes>
-        <Footer/>
+        {
+          isHeaderFooterShow === true && <Footer/>
+        }  
+        
         {
                 isOpenProductModal && <ProductsModal  />
             }
